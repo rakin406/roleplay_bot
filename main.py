@@ -20,7 +20,7 @@ def main():
 
     bot_description = input("Bot's character description (Optional): ")
     user_description = input("Your character description (Optional): ")
-    world = input("Scenario and lore (Optional): ")
+    scene = input("Scenario and lore (Optional): ")
 
 
 if __name__ == "__main__":

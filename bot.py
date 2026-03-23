@@ -14,7 +14,7 @@ class BotParameters:
     anon_name: str
     bot_description: str | None
     anon_description: str | None
-    world: str | None  # Scenario and lore
+    scene: str | None
 
 
 class Bot:
@@ -74,7 +74,7 @@ class Bot:
             Name: {self.params.anon_name}
             Personality: {self.params.anon_description}
 
-            Scene: {self.params.world}
+            Scene: {self.params.scene}
             """
 
             new_msg = f"{initial_prompt}\n{new_msg}"
