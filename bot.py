@@ -62,6 +62,10 @@ class Bot:
 
         ollama.create(model=self.MODEL_NAME, modelfile=modelfile)
 
+    def __del__(self):
+        """Cleanup function."""
+        ollama.delete(self.MODEL_NAME)
+
     def chat(self, message: str) -> str | None:
         """Returns a chat response."""
         new_msg = message
