@@ -1,4 +1,8 @@
+"""This is the CLI program of the roleplay bot."""
+
+
 def main():
+    """Main function."""
     print("Hello from roleplay-bot!")
 
 
