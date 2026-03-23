@@ -1,5 +1,6 @@
 """This module contains the AI chatbot."""
 
+from typing import final
 from dataclasses import dataclass
 
 import ollama
@@ -17,6 +18,7 @@ class BotParameters:
     scene: str | None
 
 
+@final
 class Bot:
     """Class for running the chatbot."""
 
