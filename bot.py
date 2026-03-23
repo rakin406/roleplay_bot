@@ -78,9 +78,9 @@ class Bot:
             My character:
 
             Name: {self.params.anon_name}
-            Personality: {self.params.anon_description}
+            {"Personality: " + self.params.anon_description if self.params.anon_description else ""}
 
-            Scene: {self.params.scene}
+            {"Scene: " + self.params.scene if self.params.scene else ""}
             """
 
             new_msg = f"{initial_prompt}\n{new_msg}"
