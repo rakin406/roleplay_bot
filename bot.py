@@ -18,4 +18,5 @@ class Bot:
     """Class for running the chatbot."""
 
     def __init__(self, params: BotParameters):
+        """Bot constructor."""
         self.params = params
