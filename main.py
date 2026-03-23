@@ -2,7 +2,7 @@
 
 import sys
 
-from bot import Bot, BotParameters
+from .bot import Bot, BotParameters
 
 
 def validate(message: str) -> str:
@@ -26,13 +26,15 @@ def main():
     user_description = input("Your character description (Optional): ").strip()
     scene = input("Scenario and lore (Optional): ").strip()
 
-    bot_parameters = BotParameters(
+    params = BotParameters(
         bot_name=bot_name,
         anon_name=username,
         bot_description=bot_description,
         anon_description=user_description,
         scene=scene,
     )
+
+    chatbot = Bot(params)
 
 
 if __name__ == "__main__":
