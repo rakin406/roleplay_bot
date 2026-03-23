@@ -6,6 +6,7 @@ from .bot import Bot, BotParameters
 
 
 def validate(message: str) -> str:
+    """Validate string."""
     # TODO: Remove extra spaces between name.
     modified = message.strip()
     if not modified:

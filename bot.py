@@ -78,7 +78,8 @@ class Bot:
             My character:
 
             Name: {self.params.anon_name}
-            {"Personality: " + self.params.anon_description if self.params.anon_description else ""}
+            {"Personality: " + self.params.anon_description if 
+            self.params.anon_description else ""}
 
             {"Scene: " + self.params.scene if self.params.scene else ""}
             """
