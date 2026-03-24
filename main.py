@@ -2,11 +2,16 @@
 
 import sys
 
+from bot import Bot, BotParameters
+
 
 def validate(message: str) -> str:
-    if not message:
+    """Validate string."""
+    # TODO: Remove extra spaces between name.
+    modified = message.strip()
+    if not modified:
         raise ValueError("String cannot be empty")
-    return message
+    return modified
 
 
 def main():
@@ -18,9 +23,26 @@ def main():
         print("Invalid input")
         sys.exit(1)
 
-    bot_description = input("Bot's character description (Optional): ")
-    user_description = input("Your character description (Optional): ")
-    world = input("Scenario and lore (Optional): ")
+    bot_description = input("Bot's character description (Optional): ").strip()
+    user_description = input("Your character description (Optional): ").strip()
+    scene = input("Scenario and lore (Optional): ").strip()
+
+    params = BotParameters(
+        bot_name=bot_name,
+        anon_name=username,
+        bot_description=bot_description,
+        anon_description=user_description,
+        scene=scene,
+    )
+
+    chatbot = Bot(params)
+
+    while True:
+        dialogue = input(">> ").strip()
+        if dialogue:
+            response = chatbot.chat(dialogue)
+            if response:
+                print(response)
 
 
 if __name__ == "__main__":
