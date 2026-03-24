@@ -2,7 +2,7 @@
 
 import sys
 
-from .bot import Bot, BotParameters
+from bot import Bot, BotParameters
 
 
 def validate(message: str) -> str:
@@ -36,6 +36,13 @@ def main():
     )
 
     chatbot = Bot(params)
+
+    while True:
+        dialogue = input(">> ").strip()
+        if dialogue:
+            response = chatbot.chat(dialogue)
+            if response:
+                print(response)
 
 
 if __name__ == "__main__":
