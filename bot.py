@@ -27,6 +27,7 @@ class Bot:
         self.params = params
         self.MODEL_NAME = "roleplay-model"
         self.TEMPERATURE = 0.8
+        self.TOP_P = 0.8
         self.NUM_CTX = 8192
         self.chat_started = False
 
@@ -94,7 +95,11 @@ class Bot:
                     "content": new_msg,
                 },
             ],
-            options={"temperature": self.TEMPERATURE, "num_ctx": self.NUM_CTX},
+            options={
+                "temperature": self.TEMPERATURE,
+                "top_p": self.TOP_P,
+                "num_ctx": self.NUM_CTX,
+            },
         )
 
         return response.message.content
