@@ -40,7 +40,7 @@ Run the main script:
 python main.py
 ```
 
-You will be prompted for: **Bot’s nickname**, **Your nickname**, **Bot’s character description** (optional), **Your character description** (optional), and **Scenario and lore** (optional)【21†L371-L379】【19†L585-L593】. For example:
+You will be prompted for: **Bot’s nickname**, **Your nickname**, **Bot’s character description** (optional), **Your character description** (optional), and **Scenario and lore** (optional). For example:
 
 ```
 Bot's nickname: Aria
