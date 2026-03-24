@@ -62,7 +62,11 @@ class Bot:
         Do NOT speak out of character.
         """
 
-        ollama.create(model=self.MODEL_NAME, from_="llama3.2", system=system_prompt)
+        ollama.create(
+            model=self.MODEL_NAME,
+            from_="llama3.2",
+            system=system_prompt,
+        )
 
     def __del__(self):
         """Cleanup function."""
