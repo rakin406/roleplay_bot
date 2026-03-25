@@ -1,12 +1,28 @@
 [project]
 name = "roleplay-bot"
 version = "1.0.0"
+authors = [
+    { name="Rakin Rahman", email="rakinrahman406@gmail.com" },
+]
 description = "Chat with AI characters"
 readme = "README.md"
 requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
 dependencies = [
     "ollama>=0.6.1",
 ]
+
+[project.urls]
+Homepage = "https://github.com/rakin406/roleplay_bot"
+Issues = "https://github.com/rakin406/roleplay_bot/issues"
+
+[project.scripts]
+main = "roleplay_bot.main:main"
 
 [build-system]
 requires = ["uv_build>=0.11.1,<0.12"]
