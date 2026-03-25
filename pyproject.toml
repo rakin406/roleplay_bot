@@ -1,6 +1,6 @@
 [project]
 name = "roleplay-bot"
-version = "1.0.1"
+version = "1.0.2"
 authors = [
     { name="Rakin Rahman", email="rakinrahman406@gmail.com" },
 ]
