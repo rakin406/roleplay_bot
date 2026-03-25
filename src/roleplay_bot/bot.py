@@ -13,9 +13,9 @@ class BotParameters:
 
     bot_name: str
     anon_name: str
-    bot_description: str | None
-    anon_description: str | None
-    scene: str | None
+    bot_description: str | None = None
+    anon_description: str | None = None
+    scene: str | None = None
 
 
 @final
