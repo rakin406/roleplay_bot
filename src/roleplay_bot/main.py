@@ -2,7 +2,7 @@
 
 import sys
 
-from bot import Bot, BotParameters
+from .bot import Bot, BotParameters
 
 
 def validate(message: str) -> str:
