@@ -2,10 +2,38 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Python](https://img.shields.io/badge/python-%3E%3D3.10-blue.svg)]() [![Lint](https://github.com/rakin406/roleplay_bot/actions/workflows/lint.yml/badge.svg)](https://github.com/rakin406/roleplay_bot/actions)
 
-**Roleplay Bot** is a Python command-line chatbot for roleplaying. The bot plays a
+**Roleplay Bot** is a Python chatbot for roleplaying. The bot plays a
 character with a given name and personality, while you play another character. You
 provide character names, optional descriptions, and an optional scenario, and the
 bot generates in-character dialogue and actions.
+
+## Example
+
+```python
+from roleplay_bot import Bot, BotParameters
+
+# Required parameters
+bot_name = "Aria"
+anon_name = "Fin"
+
+# Optional parameters
+bot_description = "A mischievous forest pixie"
+anon_description = "A brave ranger"
+scene = "In a misty woodland glade, a chance encounter..."
+
+params = BotParameters(
+    bot_name=bot_name,
+    anon_name=anon_name,
+    bot_description=bot_description,
+    anon_description=anon_description,
+    scene=scene,
+)
+
+bot = Bot(params)
+
+response = bot.chat("Hello, Aria!")
+print(response)
+```
 
 ## Prerequisites
 
@@ -22,7 +50,7 @@ bot generates in-character dialogue and actions.
    cd roleplay_bot
    ```
 2. **Install Python dependencies:**  
-   You need the Ollama Python library (and optionally UV). For example:  
+   You need the Ollama Python library. For example:  
    ```bash
    pip install ollama
    ```  
